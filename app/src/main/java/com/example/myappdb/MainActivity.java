@@ -24,7 +24,7 @@ import java.sql.Ref;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn, btn1;
+    Button btn, btn1, btn2;
     ImageView imageView;
     StorageReference storageReference;
     public Uri imguri;
@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         btn = (Button)findViewById(R.id.button);
         btn1 = (Button)findViewById(R.id.button2);
+        btn2 = (Button)findViewById(R.id.button3);
         imageView = (ImageView)findViewById(R.id.imageView);
 
         btn.setOnClickListener(new View.OnClickListener() {
@@ -51,6 +52,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Fileuploader();
+            }
+        });
+
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Main4Activity.class);
+                startActivity(intent);
             }
         });
     }
